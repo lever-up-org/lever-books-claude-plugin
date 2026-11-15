@@ -8,6 +8,9 @@ description: Gives a one-page weekly or monthly money check-in for a Lever Books
 One short page that says how things stand and what needs doing. Follow
 [the Lever Books rules](references/lever-books.md).
 
+If the bank tools aren't on this connection, say Lever Books has no bank data here yet and offer
+what its documents and requests show instead.
+
 ## Non-negotiables
 
 - One page. Each part is a sentence or a short table.
@@ -23,14 +26,14 @@ One short page that says how things stand and what needs doing. Follow
 2. **Fix the period**: the last 7 days (weekly, the default) or the last full month (monthly), and
    the period before it.
 3. **Fetch in one batch**:
-   - `list_bank_accounts` for balances and feed status: add up everyday and savings accounts as
+   - `lever-books:list_bank_accounts` for balances and feed status: add up everyday and savings accounts as
      available, and show cards and loans separately as owed;
-   - `summarise_bank_transactions` grouped by `category`, for both periods, leaving out the
+   - `lever-books:summarise_bank_transactions` grouped by `category`, for both periods, leaving out the
      transfer and card repayment codes;
-   - `summarise_bank_transactions` grouped by `merchant`, then `search_bank_transactions` with
+   - `lever-books:summarise_bank_transactions` grouped by `merchant`, then `lever-books:search_bank_transactions` with
      `text` only for merchants that look new or changed;
-   - `search_documents` with `type` `bill` for bills coming due;
-   - `list_requests` for open requests.
+   - `lever-books:search_documents` with `type` `bill` for bills coming due;
+   - `lever-books:list_requests` for open requests.
 4. **Compare**: money in, out and net against last time; the top three categories and their
    change.
 5. **Coming up** before the next check-in: bills, regular charges, and for a GST-registered
@@ -62,7 +65,7 @@ This week
 3. ‹action›
 ```
 
-Then offer the check-in dashboard: an HTML artifact from `assets/dashboard.html`, following
+Then offer the check-in dashboard: an HTML artifact, starting from the HTML in `assets/dashboard.md`, following
 [the check-in dashboard brief](assets/check-in-dashboard.md).
 
 At the end of the first check-in, and only once, offer:

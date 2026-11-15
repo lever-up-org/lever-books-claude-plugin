@@ -9,13 +9,13 @@ One connection reads one Lever Books profile, a person's own finances or a busin
 
 | Tool | Reads |
 | --- | --- |
-| `summarise_bank_transactions` | Money in, out, net and count, grouped by `month`, `category`, `merchant` or `account`. Start here for any "how much" |
-| `search_bank_transactions` | Individual transactions, newest first, a page at a time. For drilling into one merchant (`text`) or category |
-| `list_bank_accounts` | Each account's balances, bank, last four digits and whether its feed is live |
-| `search_documents` | Receipts, bills, invoices and reports, with date, due date, amount and reading status |
-| `get_document` | One document: supplier, ABN, amount, GST and its lines |
-| `list_requests` | What the accountant or bookkeeper has asked for, with asked and due dates |
-| `get_request` | One request: its purpose, options and whether it asks for a payment |
+| `lever-books:summarise_bank_transactions` | Money in, out, net and count, grouped by `month`, `category`, `merchant` or `account`. Start here for any "how much" |
+| `lever-books:search_bank_transactions` | Individual transactions, newest first, a page at a time. For drilling into one merchant (`text`) or category |
+| `lever-books:list_bank_accounts` | Each account's balances, bank, last four digits and whether its feed is live |
+| `lever-books:search_documents` | Receipts, bills, invoices and reports, with date, due date, amount and reading status |
+| `lever-books:get_document` | One document: supplier, ABN, amount, GST and its lines |
+| `lever-books:list_requests` | What the accountant or bookkeeper has asked for, with asked and due dates |
+| `lever-books:get_request` | One request: its purpose, options and whether it asks for a payment |
 
 If a bank tool isn't available, say Lever Books has no bank data on this connection and answer
 from documents and requests.
@@ -71,7 +71,7 @@ edit it or send it, and never the same thing twice.
 
 | Deliverable | Where |
 | --- | --- |
-| A dashboard | An HTML artifact from the dashboard.html in the skill's assets folder, following its brief |
+| A dashboard | An HTML artifact, starting from the HTML in the skill's assets/dashboard.md, following its brief |
 | A worksheet someone edits | A Claude Sheets spreadsheet; without Sheets, an .xlsx file |
 | A document someone reads or sends | A Claude Docs document; without Docs, a .docx file |
 

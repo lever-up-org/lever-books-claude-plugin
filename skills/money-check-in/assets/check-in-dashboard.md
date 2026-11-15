@@ -1,6 +1,6 @@
 # Check-in dashboard brief
 
-Start from `dashboard.html` in this folder and fill its data block. Keep the same layout every
+Start from the HTML in `dashboard.md` in this folder and fill its data block. Keep the same layout every
 week so changes stand out.
 
 - **Title:** one sentence, for example "You spent $612 this week, $80 less than last week".

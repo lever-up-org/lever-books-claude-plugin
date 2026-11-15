@@ -1,6 +1,6 @@
 # Cash flow dashboard brief
 
-Start from `dashboard.html` in this folder and fill its data block.
+Start from the HTML in `dashboard.md` in this folder and fill its data block.
 
 - **Title:** the lowest point as an insight, for example "Lowest $612 on 26 Nov, two days before
   payday".

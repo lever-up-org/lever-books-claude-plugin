@@ -1,14 +1,17 @@
 # Lever Books for Claude
 
-- "Where did my money go last month?"
-- "Will I make it to payday?"
-- "Get me ready for tax time."
 - "What does my accountant still need from me?"
+- "Get me ready for tax time."
+- "Which receipts am I missing?"
+- "Where did my money go last month?"
 
-Ask Claude questions like these and get answers from your own Lever Books: your bank accounts and
-transactions, the receipts and documents you've added, and what your accountant is waiting on. It
-works for your own finances and for a business, and turns the answer into a dashboard, a Claude
-Sheets worksheet or a Claude Docs pack when you want one.
+Ask Claude questions like these and get answers from your own Lever Books: the receipts and
+documents you've added and what your accountant is waiting on. It works for your own finances and
+for a business, and turns the answer into a dashboard, a Claude Sheets worksheet or a Claude Docs
+pack when you want one.
+
+**Spending, subscriptions and cash flow answers need bank data in Lever Books.** Until it is
+switched on for your profile, Claude says so and answers from your documents and requests.
 
 **Claude can read your Lever Books. It can't move money or change anything.** There is no tool
 that pays, edits a transaction or replies to your accountant: Claude drafts, you send.
@@ -22,6 +25,9 @@ and press Connect. Sign in to Lever Books, choose the profile Claude may read, a
 Lever Books with the URL `https://books.leverup.com.au/api/mcp`, then connect and sign in as above.
 You get the data without the skills.
 
+**Claude Code can't sign in directly yet.** The sign-in accepts only claude.ai's callback, so use
+Lever Books from claude.ai, Claude desktop or Claude mobile.
+
 Skills need a paid Claude plan with code execution and file creation turned on. Each connection
 reads one profile. You can see every call Claude made, and stop sharing at any time, in Lever Books
 under Account › your profile › Connected AI apps. Business owners turn Claude on for the business
@@ -31,12 +37,12 @@ first, in the same place.
 
 | Skill | What it does |
 | --- | --- |
-| money-check-in | A one-page weekly or monthly check-in with three things to do. Start here: the first one shows what Lever Books holds |
-| where-did-my-money-go | Spending by category and merchant against the period before, with a spending dashboard |
-| subscriptions-and-bills | Your recurring charges, their yearly cost and price rises, and the bills coming due |
-| cash-flow-outlook | Your balance, what's due before payday and the lowest point on the way |
-| tax-time-pack | The income year's may-be-deductible spending, payments with no receipt, GST credits on purchases and your accountant's checklist |
 | answer-my-accountant | Works through each open request: the evidence that answers it and a reply to send |
+| tax-time-pack | The income year's may-be-deductible spending, payments with no receipt, GST credits on purchases and your accountant's checklist |
+| money-check-in | A one-page weekly or monthly check-in with three things to do. Start here: the first one shows what Lever Books holds |
+| where-did-my-money-go | Spending by category and merchant against the period before, with a spending dashboard. Needs bank data |
+| subscriptions-and-bills | Your recurring charges, their yearly cost and price rises, and the bills coming due. Needs bank data |
+| cash-flow-outlook | Your balance, what's due before payday and the lowest point on the way. Needs bank data |
 
 Australian tax figures and dates sit in
 [skills/tax-time-pack/references/australian-tax.md](skills/tax-time-pack/references/australian-tax.md),

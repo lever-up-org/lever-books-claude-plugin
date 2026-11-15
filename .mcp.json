@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "lever-books": { "type": "http", "url": "https://books.leverup.com.au/api/mcp" }
+  }
+}

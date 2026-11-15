@@ -2,15 +2,14 @@
   "name": "lever-books",
   "displayName": "Lever Books",
   "version": "0.1.0",
-  "description": "See where your money goes, get ready for tax time and answer your accountant, from your Lever Books bank accounts, receipts, documents and requests.",
+  "description": "Read the receipts and documents in your Lever Books and work through your accountant's requests. Spending, subscriptions and cash flow answers need bank data in Lever Books.",
   "author": { "name": "Lever Up", "url": "https://leverup.com.au" },
   "license": "MIT",
   "keywords": ["finance", "bookkeeping", "receipts", "tax", "budget", "accountant", "australia"],
   "homepage": "https://leverup.com.au/business/books",
+  "documentationUrl": "https://github.com/lever-up-org/lever-books-claude-plugin#readme",
+  "supportUrl": "https://github.com/lever-up-org/lever-books-claude-plugin/issues",
   "privacyPolicyUrl": "https://leverup.com.au/privacy",
   "termsOfServiceUrl": "https://leverup.com.au/terms",
-  "icon": "./icon.png",
-  "mcpServers": {
-    "lever-books": { "type": "http", "url": "https://books.leverup.com.au/api/mcp" }
-  }
+  "icon": "./icon.png"
 }

@@ -8,9 +8,12 @@ description: Breaks down where money went for a Lever Books profile, by category
 Answer "where did it go" with totals from Lever Books, compared with the period before, in plain
 words. Follow [the Lever Books rules](references/lever-books.md).
 
+If the bank tools aren't on this connection, say Lever Books has no bank data here yet and offer
+what its documents and requests show instead.
+
 ## Non-negotiables
 
-- Totals come from `summarise_bank_transactions`, never from adding up pages of rows.
+- Totals come from `lever-books:summarise_bank_transactions`, never from adding up pages of rows.
 - Leave out transfers and card repayments, and say you did.
 - Explain, don't judge: "Food and drink was up $210", not "you spent too much".
 
@@ -18,14 +21,14 @@ words. Follow [the Lever Books rules](references/lever-books.md).
 
 1. **Fix the period.** Default to the last full calendar month, compared with the month before.
    Name both.
-2. **By category**: `summarise_bank_transactions` with `groupBy` `category`, for the period and
+2. **By category**: `lever-books:summarise_bank_transactions` with `groupBy` `category`, for the period and
    for the comparison. Each group carries its money in and out. Drop the transfer and card
    repayment codes, then add up the rest for the period's money in and out.
-3. **By merchant**: `summarise_bank_transactions` with `groupBy` `merchant` and `direction` `out`,
+3. **By merchant**: `lever-books:summarise_bank_transactions` with `groupBy` `merchant` and `direction` `out`,
    for the period.
 4. **Find the movers.** Rank categories by the dollar change, not the percentage, so small
    categories don't top the list.
-5. **Drill in when asked**: `search_bank_transactions` with the exact `category` code the summary
+5. **Drill in when asked**: `lever-books:search_bank_transactions` with the exact `category` code the summary
    returned, or `text` for a merchant, lists the payments behind a total.
 
 ## Output
@@ -47,7 +50,7 @@ Biggest changes
 Left out: $‹x› of transfers between your accounts and card repayments.
 ```
 
-Then offer the spending dashboard: an HTML artifact from `assets/dashboard.html`, following
+Then offer the spending dashboard: an HTML artifact, starting from the HTML in `assets/dashboard.md`, following
 [the spending dashboard brief](assets/spending-dashboard.md).
 
 ## Gotchas

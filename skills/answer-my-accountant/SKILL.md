@@ -18,15 +18,15 @@ Turn each open request into "here's what answers it, here's what to send". Follo
 
 ## Steps
 
-1. **List**: `list_requests` (open by default), paging until done. Sort by `dueOn`, overdue first,
+1. **List**: `lever-books:list_requests` (open by default), paging until done. Sort by `dueOn`, overdue first,
    then those with no due date by when they were asked.
-2. **Open each** the person wants to work on: `get_request` for its purpose, options, payment line
+2. **Open each** the person wants to work on: `lever-books:get_request` for its purpose, options, payment line
    and how many answers it already has.
 3. **Find the evidence** it asks for:
-   - paperwork: `search_documents` with `text` and the dates it covers, then `get_document` to
+   - paperwork: `lever-books:search_documents` with `text` and the dates it covers, then `lever-books:get_document` to
      confirm the supplier, amount and date;
-   - figures: `summarise_bank_transactions` for the period and category it asks about (for example
-     "all fuel for 2025–26"), and `search_bank_transactions` for the payments behind it.
+   - figures: `lever-books:summarise_bank_transactions` for the period and category it asks about (for example
+     "all fuel for 2025–26"), and `lever-books:search_bank_transactions` for the payments behind it.
 4. **Draft the reply** in the person's voice: short, the answer or figure first, the documents to
    attach by name and date, and anything still missing said plainly.
 5. **Say what is still missing** and where it might be: another account, a paper receipt, an
@@ -63,4 +63,4 @@ come. Export it before sharing. Without Docs, a .docx file.
 | A request already has answers | Say when it was last answered, and ask whether something is still owed before drafting again |
 | The evidence is a document still reading | Name it and say Lever Books is still reading it |
 | The request asks for something Lever Books doesn't hold (a payslip, a contract) | Say so and what to upload |
-| The person asks about a closed request | `list_requests` with `state` `done`, `declined` or `withdrawn` |
+| The person asks about a closed request | `lever-books:list_requests` with `state` `done`, `declined` or `withdrawn` |

@@ -1,6 +1,6 @@
 # Spending dashboard brief
 
-Start from `dashboard.html` in this folder and fill its data block.
+Start from the HTML in `dashboard.md` in this folder and fill its data block.
 
 - **Title:** the insight, for example "You spent $4,211 in October, $230 more than September".
 - **KPIs:** Spent (the headline, with its change), Came in, Net, Top category with its share.
@@ -8,7 +8,7 @@ Start from `dashboard.html` in this folder and fill its data block.
   1. `lines`: spending through the month as a running total, week by week, this period `actual`
      and the period before `compare` (dashed grey). Titled with how they compare, for example
      "October ran ahead of September from the second week". Each point is one
-     `summarise_bank_transactions` call for the weeks so far, grouped by `category` and added up
+     `lever-books:summarise_bank_transactions` call for the weeks so far, grouped by `category` and added up
      without transfers and card repayments.
   2. `bars`: the top eight categories, the comparison as the grey tick, then "Everything else".
      Titled with the biggest mover.

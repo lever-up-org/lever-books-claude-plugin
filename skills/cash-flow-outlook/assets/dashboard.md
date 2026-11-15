@@ -1,3 +1,6 @@
+This is the HTML reference build for this skill's dashboard artifact. Start from the HTML below and fill its data block.
+
+```html
 <!doctype html>
 <!--
   1. Replace the JSON in #lever-data with the figures the Lever Books tools returned.
@@ -11,16 +14,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lever Books dashboard</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #FAFAFA; --card: #FFFFFF; --text: #0A0A0A; --muted: #67676F; --border: #E4E4E7;
     --accent: #5B5DF1; --accent-text: #3F42EE; --compare: #91919D;
     --in: #0072B2; --out: #D55E00; --warn: #B45309;
-    --display: 'Space Grotesk', system-ui, sans-serif;
-    --body: 'IBM Plex Sans', system-ui, sans-serif;
-    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --display: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -292,3 +293,4 @@
 </script>
 </body>
 </html>
+```

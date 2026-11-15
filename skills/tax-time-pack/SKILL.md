@@ -24,7 +24,7 @@ Gather the evidence so the accountant can do the return or the BAS. Follow
 
 1. **Fix the period.** For a return, the income year: before October, the year just ended;
    otherwise ask. For a BAS, the quarter just ended. Name its due date from the tax figures.
-2. **Totals by category**: `summarise_bank_transactions` with `groupBy` `category` and
+2. **Totals by category**: `lever-books:summarise_bank_transactions` with `groupBy` `category` and
    `direction` `out` for the period.
 3. **Choose the may-be-deductible categories** with the person:
    - their own finances, as an employee: work equipment (MERCHANDISE_ELECTRONICS,
@@ -33,17 +33,17 @@ Gather the evidence so the accountant can do the return or the BAS. Follow
      (SERVICES_EDUCATION), donations (GOVERNMENT_AND_NON_PROFIT_DONATIONS), work travel;
    - a business or sole trader: everything spent running the business.
    For 2026–27 and later, flag the standard deduction for employees from the tax figures.
-4. **Payments behind each** chosen category only: `search_bank_transactions` with the exact
+4. **Payments behind each** chosen category only: `lever-books:search_bank_transactions` with the exact
    `category` code, paging until done. A year of payments is many calls, and calls per day are
    limited, so work through the categories the person picked and stop to ask before the rest.
-5. **Possible receipts**: `search_documents` over the period (any `type`). A payment has a
+5. **Possible receipts**: `lever-books:search_documents` over the period (any `type`). A payment has a
    possible receipt when a document has the same amount, a date close before it and the same
    business name. List the payments with none, largest first.
-6. **GST credits** (GST-registered business, one quarter at a time): `get_document` for each
+6. **GST credits** (GST-registered business, one quarter at a time): `lever-books:get_document` for each
    purchase document in the quarter to read its `gst`. Total them, and list business payments with
    no document as "No tax invoice". For a large quarter, say how many documents there are and ask
    before opening them all.
-7. **The accountant's asks**: `list_requests`, open and with `state` `done`, keeping those about
+7. **The accountant's asks**: `lever-books:list_requests`, open and with `state` `done`, keeping those about
    this return or BAS.
 
 ## Output

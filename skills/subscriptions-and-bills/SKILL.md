@@ -8,6 +8,9 @@ description: Finds the subscriptions and recurring charges in a Lever Books prof
 List what charges the person again and again, and what is about to fall due. Follow
 [the Lever Books rules](references/lever-books.md).
 
+If the bank tools aren't on this connection, say Lever Books has no bank data here yet and offer
+what its documents and requests show instead.
+
 ## Non-negotiables
 
 - Lever Books can't cancel anything. Point out what's worth a look; the person cancels with the
@@ -17,16 +20,16 @@ List what charges the person again and again, and what is about to fall due. Fol
 
 ## Steps
 
-1. **Find the candidates**: `summarise_bank_transactions` with `groupBy` `merchant` and
+1. **Find the candidates**: `lever-books:summarise_bank_transactions` with `groupBy` `merchant` and
    `direction` `out` over the last year (`from` a year ago, `to` today). It returns the 100
    biggest merchants, so run it again with `maxAmount` 100 to catch small subscriptions. Keep
    merchants charged several times.
-2. **Drill into each**: `search_bank_transactions` with `text` set to the merchant, `direction`
+2. **Drill into each**: `lever-books:search_bank_transactions` with `text` set to the merchant, `direction`
    `out` and the same year's `from` and `to`, for its dates and amounts.
 3. **Read the pattern**: the gap between charges (weekly, fortnightly, monthly, quarterly,
    yearly, allowing a few days' slack), the usual amount and the last date. Work out the next
    expected date, the yearly cost, and whether the latest charge is higher than the ones before.
-4. **Bills due**: `search_documents` with `type` `bill`. Keep those with a `dueOn` from today, and
+4. **Bills due**: `lever-books:search_documents` with `type` `bill`. Keep those with a `dueOn` from today, and
    overdue ones with no matching payment in the bank.
 
 ## Output
@@ -48,7 +51,7 @@ Bills due
 
 Then offer one of:
 
-- **The subscriptions board**: an HTML artifact from `assets/dashboard.html`, following
+- **The subscriptions board**: an HTML artifact, starting from the HTML in `assets/dashboard.md`, following
   [the subscriptions board brief](assets/subscriptions-board.md).
 - **A tracker the person keeps**: a Claude Sheets spreadsheet with one row per charge (merchant,
   how often, amount, next date, yearly cost as a formula, and a Keep or Cancel dropdown), and a

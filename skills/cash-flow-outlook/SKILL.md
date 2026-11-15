@@ -8,6 +8,9 @@ description: Shows whether a Lever Books profile's money lasts until the next pa
 Answer "will I have enough" from real balances and what is already known to be coming. Follow
 [the Lever Books rules](references/lever-books.md).
 
+If the bank tools aren't on this connection, say Lever Books has no bank data here yet and offer
+what its documents and requests show instead.
+
 ## Non-negotiables
 
 - Start from the real balance. If no account has one, say "no opening balance" and show only what
@@ -18,14 +21,14 @@ Answer "will I have enough" from real balances and what is already known to be c
 
 ## Steps
 
-1. **Balance today**: `list_bank_accounts`. Add up the available balances of everyday and savings
+1. **Balance today**: `lever-books:list_bank_accounts`. Add up the available balances of everyday and savings
    accounts; show cards and loans separately as owed. Note each balance's date.
-2. **Regular money in and out**: `summarise_bank_transactions` with `groupBy` `merchant` over the
-   last three months, then `search_bank_transactions` with `text` for each merchant that repeats
+2. **Regular money in and out**: `lever-books:summarise_bank_transactions` with `groupBy` `merchant` over the
+   last three months, then `lever-books:search_bank_transactions` with `text` for each merchant that repeats
    (pay, rent, loan repayments, subscriptions) to find its day and amount.
-3. **Bills due**: `search_documents` with `type` `bill`, keeping those with a `dueOn` before the
+3. **Bills due**: `lever-books:search_documents` with `type` `bill`, keeping those with a `dueOn` before the
    end date.
-4. **Payment requests**: `list_requests`, then `get_request` to see which ask for a payment, with
+4. **Payment requests**: `lever-books:list_requests`, then `lever-books:get_request` to see which ask for a payment, with
    their `dueOn`. The request doesn't give the amount: list it as "amount not in Lever Books" and
    ask the person, rather than putting a figure into the walk.
 5. **Tax dates**: for a GST-registered business, add the next BAS due date from
@@ -51,7 +54,7 @@ Lowest point: $‹x› on ‹date›, ‹before or after› ‹the big item›.
 Not included: everyday spending such as groceries and fuel. Last month that was about $‹x›.
 ```
 
-Then offer the cash flow dashboard: an HTML artifact from `assets/dashboard.html`, following
+Then offer the cash flow dashboard: an HTML artifact, starting from the HTML in `assets/dashboard.md`, following
 [the cash flow dashboard brief](assets/cash-flow-dashboard.md).
 
 ## Gotchas

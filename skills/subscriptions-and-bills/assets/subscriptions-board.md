@@ -1,6 +1,6 @@
 # Subscriptions board brief
 
-Start from `dashboard.html` in this folder and fill its data block.
+Start from the HTML in `dashboard.md` in this folder and fill its data block.
 
 - **Title:** the total as an insight, for example "$184 a month on 11 subscriptions".
 - **KPIs:** Per month (the headline), Per year, Due in the next fortnight, Price rises.
