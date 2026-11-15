@@ -1,6 +1,6 @@
 ---
 name: subscriptions-and-bills
-description: Finds the subscriptions and recurring charges in a Lever Books profile's bank transactions, with how often each charges, the next expected date, the yearly cost and any price rise, plus the bills in Lever Books that are coming due. Builds a subscriptions board or a tracker sheet. Use when the person asks "which subscriptions am I paying for", "what are my recurring charges", "did Netflix go up", "what bills are coming up", "what's due this month", or wants to cut regular costs. Do NOT use for a full spending breakdown (where-did-my-money-go) or whether there is enough cash to cover them (cash-flow-outlook).
+description: Catches every subscription and recurring charge a person pays, from the bank transactions in Lever Books, with how often each charges, the next expected date, the yearly cost and any price rise, plus the bills in Lever Books that are coming due. Builds a subscriptions board or a tracker sheet. Use when the person asks "which subscriptions am I paying for", "what are my recurring charges", "did Netflix go up", "what bills are coming up", "what's due this month", or wants to cut regular costs. Do NOT use for a full spending breakdown (where-did-my-money-go) or whether there is enough cash to cover them (cash-flow-outlook).
 ---
 
 # Subscriptions and bills
@@ -9,7 +9,7 @@ List what charges the person again and again, and what is about to fall due. Fol
 [the Lever Books rules](references/lever-books.md).
 
 If the bank tools aren't on this connection, say Lever Books has no bank data here yet and offer
-what its documents and requests show instead.
+what its receipts and documents show instead.
 
 ## Non-negotiables
 

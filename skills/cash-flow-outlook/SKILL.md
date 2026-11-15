@@ -1,6 +1,6 @@
 ---
 name: cash-flow-outlook
-description: Shows whether a Lever Books profile's money lasts until the next payday or a big bill. Starts from today's balance, adds the regular outgoings and the bills and payment requests coming due, and finds the lowest point before money next comes in. Builds a cash flow dashboard. Use when the person asks "will I make it to payday", "can I cover rent next week", "can I pay my BAS", "am I going to be short this month", or "how much can I spend until payday". Do NOT use for past spending (where-did-my-money-go) or a list of subscriptions (subscriptions-and-bills).
+description: Tells a person whether their money lasts until the next payday or a big bill. Starts from today's balance in Lever Books, adds the regular outgoings and the bills and payments coming due, and finds the lowest point before money next comes in. Builds a cash flow dashboard. Use when the person asks "will I make it to payday", "can I cover rent next week", "can I pay my BAS", "am I going to be short this month", or "how much can I spend until payday". Do NOT use for past spending (where-did-my-money-go) or a list of subscriptions (subscriptions-and-bills).
 ---
 
 # Cash flow outlook
@@ -9,13 +9,13 @@ Answer "will I have enough" from real balances and what is already known to be c
 [the Lever Books rules](references/lever-books.md).
 
 If the bank tools aren't on this connection, say Lever Books has no bank data here yet and offer
-what its documents and requests show instead.
+what its receipts and documents show instead.
 
 ## Non-negotiables
 
 - Start from the real balance. If no account has one, say "no opening balance" and show only what
   is coming in and out.
-- Show only what is known or regular: the balance, regular payments, bills and requests with due
+- Show only what is known or regular: the balance, regular payments and bills with due
   dates. Don't model a range or guess at other spending; say it isn't included.
 - State what you assumed under the answer.
 
@@ -28,13 +28,10 @@ what its documents and requests show instead.
    (pay, rent, loan repayments, subscriptions) to find its day and amount.
 3. **Bills due**: `lever-books:search_documents` with `type` `bill`, keeping those with a `dueOn` before the
    end date.
-4. **Payment requests**: `lever-books:list_requests`, then `lever-books:get_request` to see which ask for a payment, with
-   their `dueOn`. The request doesn't give the amount: list it as "amount not in Lever Books" and
-   ask the person, rather than putting a figure into the walk.
-5. **Tax dates**: for a GST-registered business, add the next BAS due date from
+4. **Tax dates**: for a GST-registered business, add the next BAS due date from
    [the Australian tax figures](references/australian-tax.md). Its amount comes from the person or
-   their accountant; never invent one.
-6. **Walk the days** from today to the next payday (or the date the person asked about): the
+   their tax agent; never invent one.
+5. **Walk the days** from today to the next payday (or the date the person asked about): the
    balance, minus each known outgoing on its day, plus each known payment in. Find the lowest
    point and its date.
 

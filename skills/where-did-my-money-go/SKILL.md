@@ -1,6 +1,6 @@
 ---
 name: where-did-my-money-go
-description: Breaks down where money went for a Lever Books profile, by category and by merchant, for any period against the one before, with the biggest changes called out, and builds a spending dashboard. Use when the person asks "where did my money go", "what did I spend this month", "how much did I spend on fuel last quarter", "what's my biggest expense", "am I spending more than last month", or wants a spending dashboard. Do NOT use for recurring charges and subscriptions (subscriptions-and-bills), future cash (cash-flow-outlook) or what is tax deductible (tax-time-pack).
+description: Shows a person where their money went, from Lever Books, by category and by merchant, for any period against the one before, with the biggest changes called out, and builds a spending dashboard. Use when the person asks "where did my money go", "what did I spend this month", "how much did I spend on fuel last quarter", "what's my biggest expense", "am I spending more than last month", or wants a spending dashboard. Do NOT use for recurring charges and subscriptions (subscriptions-and-bills), future cash (cash-flow-outlook) or what is tax deductible (tax-time-pack).
 ---
 
 # Where did my money go
@@ -9,7 +9,7 @@ Answer "where did it go" with totals from Lever Books, compared with the period 
 words. Follow [the Lever Books rules](references/lever-books.md).
 
 If the bank tools aren't on this connection, say Lever Books has no bank data here yet and offer
-what its documents and requests show instead.
+what its receipts and documents show instead.
 
 ## Non-negotiables
 

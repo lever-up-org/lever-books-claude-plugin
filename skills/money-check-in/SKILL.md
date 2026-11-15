@@ -1,6 +1,6 @@
 ---
 name: money-check-in
-description: Gives a one-page weekly or monthly money check-in for a Lever Books profile, and is the place to start. Covers balances, money in and out against last time, new or changed regular charges, anything unusual, bills and BAS coming up, and what the accountant is waiting on, ending with three things to do. On first use it shows what Lever Books holds with one real check-in. Builds a check-in dashboard and can run every week. Use when the person says "how am I tracking", "weekly recap", "Monday money brief", "give me a check-in", "get me started", "what can you do with Lever Books", or has just connected Lever Books. Do NOT use for a deep dive on spending (where-did-my-money-go), cash before payday (cash-flow-outlook) or tax (tax-time-pack).
+description: Tells a person how their money is tracking, in a one-page weekly or monthly check-in from Lever Books, and is the place to start. Covers balances, money in and out against last time, new or changed regular charges, anything unusual, and the bills and BAS coming up, ending with three things to do. On first use it shows what Lever Books holds with one real check-in. Builds a check-in dashboard and can run every week. Use when the person says "how am I tracking", "weekly recap", "Monday money brief", "give me a check-in", "get me started", "what can you do with Lever Books", or has just connected Lever Books. Do NOT use for a deep dive on spending (where-did-my-money-go), cash before payday (cash-flow-outlook) or tax (tax-time-pack).
 ---
 
 # Money check-in
@@ -9,7 +9,7 @@ One short page that says how things stand and what needs doing. Follow
 [the Lever Books rules](references/lever-books.md).
 
 If the bank tools aren't on this connection, say Lever Books has no bank data here yet and offer
-what its documents and requests show instead.
+what its receipts and documents show instead.
 
 ## Non-negotiables
 
@@ -21,8 +21,9 @@ what its documents and requests show instead.
 ## Steps
 
 1. **First time?** If this is the person's first check-in, say in one line that Claude can read
-   their Lever Books but can't move money or change anything, then run the steps below on their
-   real data. That one real check-in is the introduction. Ask nothing first.
+   their Lever Books and add a receipt they give it, but can't move money or change anything else,
+   then run the steps below on their real data. That one real check-in is the introduction. Ask
+   nothing first.
 2. **Fix the period**: the last 7 days (weekly, the default) or the last full month (monthly), and
    the period before it.
 3. **Fetch in one batch**:
@@ -32,13 +33,12 @@ what its documents and requests show instead.
      transfer and card repayment codes;
    - `lever-books:summarise_bank_transactions` grouped by `merchant`, then `lever-books:search_bank_transactions` with
      `text` only for merchants that look new or changed;
-   - `lever-books:search_documents` with `type` `bill` for bills coming due;
-   - `lever-books:list_requests` for open requests.
+   - `lever-books:search_documents` with `type` `bill` for bills coming due.
 4. **Compare**: money in, out and net against last time; the top three categories and their
    change.
 5. **Coming up** before the next check-in: bills, regular charges, and for a GST-registered
    business the next BAS due date from [the Australian tax figures](references/australian-tax.md).
-6. **Pick three things to do** from what you found: an overdue request, a price rise, a bill due.
+6. **Pick three things to do** from what you found: a bill due, a price rise, an unusual charge to check.
 
 ## Output
 
@@ -56,8 +56,6 @@ Worth a look
 
 Coming up
 - ‹date›: ‹bill or charge› $‹x›
-
-Your accountant is waiting on ‹n› things, the first due ‹date›.
 
 This week
 1. ‹action›

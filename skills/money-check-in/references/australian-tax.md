@@ -6,13 +6,13 @@ official page states it but is the only source or flags it as provisional; **N**
 an official page, so point the person to ato.gov.au instead of stating it.
 
 If a question needs a figure that isn't here, don't supply one from memory: name the figure and
-point to ato.gov.au or the person's accountant.
+point to ato.gov.au or a registered tax agent.
 
 | Fact | Value | Checked | Source |
 | --- | --- | --- | --- |
 | Income year | 1 July to 30 June. "2025–26" is 1 Jul 2025 to 30 Jun 2026 | Y\* | [Due dates for individuals and trusts](https://www.ato.gov.au/tax-and-super-professionals/for-tax-professionals/prepare-and-lodge/registered-agent-lodgment-program/due-dates-for-tax-returns-by-client-type/individuals-and-trusts) |
 | Individual return, lodging yourself | 31 October after the year ends | Y | [Preparing your tax return](https://www.ato.gov.au/individuals-and-families/your-tax-return/before-you-prepare-your-tax-return/preparing-your-tax-return) |
-| Individual return, through a tax agent | Later dates set by the agent program; for a 2025–26 return, 15 May 2027 for most clients on the agent's list by 31 Oct 2026. Ask the accountant | Y\* | [Due dates for individuals and trusts](https://www.ato.gov.au/tax-and-super-professionals/for-tax-professionals/prepare-and-lodge/registered-agent-lodgment-program/due-dates-for-tax-returns-by-client-type/individuals-and-trusts) |
+| Individual return, through a tax agent | Later dates set by the agent program; for a 2025–26 return, 15 May 2027 for most clients on the agent's list by 31 Oct 2026. Ask your tax agent | Y\* | [Due dates for individuals and trusts](https://www.ato.gov.au/tax-and-super-professionals/for-tax-professionals/prepare-and-lodge/registered-agent-lodgment-program/due-dates-for-tax-returns-by-client-type/individuals-and-trusts) |
 | GST rate | 10% | Y | [How GST works](https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/how-gst-works) |
 | Must register for GST | GST turnover of $75,000 or more ($150,000 for a non-profit); register within 21 days | Y | [Registering for GST](https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/registering-for-gst) |
 | Quarterly BAS, lodging yourself | Q1 Jul–Sep: 28 Oct. Q2 Oct–Dec: 28 Feb. Q3 Jan–Mar: 28 Apr. Q4 Apr–Jun: 28 Jul. A weekend or public holiday moves it to the next business day | Y | [Due dates for lodging and paying your BAS](https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/business-activity-statements-bas/due-dates-for-lodging-and-paying-your-bas) |
